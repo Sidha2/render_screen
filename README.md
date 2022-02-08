@@ -11,8 +11,7 @@ use Bedri\RenderScreen\RenderScreen;
 
 for ($i = 0; $i <= 5; $i++) 
 {
-    (new RenderScreen())->renderOutput("Some text ".PHP_EOL." here $i ... ");
-    // echo PHP_EOL;
+    RenderScreen::renderOutput("Some text ".PHP_EOL." here $i ... ");
     sleep(1);
 }
 

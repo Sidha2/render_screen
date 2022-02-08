@@ -3,7 +3,7 @@ namespace Bedri\RenderScreen;
 
 class RenderScreen {
 
-    private function replaceCommandOutput(array $output) {
+    private static function replaceCommandOutput(array $output) {
         static $oldLines = 0;
         $numNewLines = count($output) - 1;
        
@@ -17,10 +17,10 @@ class RenderScreen {
         $numNewLines = $oldLines;
       }
       
-    public function renderOutput($input) {
+    public static function renderOutput($input) {
         $arr = explode(PHP_EOL, $input);
       
-        $this->replaceCommandOutput($arr);
+        self::replaceCommandOutput($arr);
       } 
 
 }
